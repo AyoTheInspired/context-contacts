@@ -5,10 +5,11 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import routes from "./routes";
 import Header from "./components/Header";
+import { GlobalProvider } from "./context/Provider";
 
 function App() {
 	return (
-		<div className="App">
+		<div>
 			<Router>
 				<Header />
 				<Switch>
