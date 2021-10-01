@@ -8,7 +8,7 @@ import {
 	Segment,
 } from "semantic-ui-react";
 
-function RegisterUI({ form: { onChange, form } }) {
+function RegisterUI({ form: { onChange, form, registerFormValid, onSubmit } }) {
 	return (
 		<div>
 			<Grid centered>
@@ -65,7 +65,12 @@ function RegisterUI({ form: { onChange, form } }) {
 								/>
 							</Form.Field>
 
-							<Button type="submit" fluid primary>
+							<Button
+								onClick={onSubmit}
+								type="submit"
+								disabled={registerFormValid}
+								fluid
+								primary>
 								Submit
 							</Button>
 						</Form>
